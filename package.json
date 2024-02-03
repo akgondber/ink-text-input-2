@@ -15,6 +15,7 @@
 	},
 	"scripts": {
 		"test": "tsc --noEmit && xo && cross-env FORCE_COLOR=1 ava",
+		"stest": "tsc --noEmit && xo",
 		"build": "tsc",
 		"prepare": "tsc",
 		"pretest": "tsc",
@@ -69,7 +70,8 @@
 			"tsx": "module"
 		},
 		"nodeArguments": [
-			"--loader=ts-node/esm"
+			"--loader=tsx",
+			"--experimental-specifier-resolution=node"
 		]
 	},
 	"xo": {
